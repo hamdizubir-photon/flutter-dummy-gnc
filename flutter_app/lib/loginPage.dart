@@ -42,29 +42,8 @@ class _LoginPageState extends State<LoginPage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          // appBar: AppBar(
-          //   title: Image(
-          //       image: AssetImage('assets/primary-logo.png'),
-          //       width: 100,
-          //       height: 30),
-          // ),
-          // drawer: Drawer(
-          //   child: ListView(
-          //     children: <Widget>[
-          //       ListTile(
-          //         title: Text("Ttem 1"),
-          //         trailing: Icon(Icons.arrow_forward),
-          //       ),
-          //       ListTile(
-          //         title: Text("Item 2"),
-          //         trailing: Icon(Icons.arrow_forward),
-          //       ),
-          //     ],
-          //   ),
-          // ),
           body: SingleChildScrollView(
         child: Container(
-          // color: Colors.blue,
           margin: EdgeInsets.fromLTRB(40, 20, 40, 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,37 +54,13 @@ class _LoginPageState extends State<LoginPage> {
                     padding: EdgeInsets.only(top: 20, bottom: 20),
                     width: 500,
                     decoration: BoxDecoration(
-                        // color: Colors.pink,
                         border: Border(
                       bottom: BorderSide(width: 2.0, color: Colors.grey[200]),
-                      //   borderRadius:
-                      //       BorderRadius.all(Radius.elliptical(20, 20)),
-                      // gradient: LinearGradient(
-                      //     colors: <Color>[Colors.amber, Colors.blue],
-                      //     begin: Alignment.topLeft,
-                      //     end: Alignment.bottomRight)
                     )),
                     child: Image(
                         image: AssetImage('assets/primary-logo.png'),
                         width: 150,
-                        height: 50)
-                    // child: Center(
-                    //     child: Column(
-                    //   mainAxisAlignment: MainAxisAlignment.center,
-                    //   children: <Widget>[
-                    //     Text(number.toString(),
-                    //         style: TextStyle(
-                    //             color: Colors.white,
-                    //             fontStyle: FontStyle.italic,
-                    //             fontWeight: FontWeight.w700,
-                    //             fontSize: 10 + number.toDouble())),
-                    //     RaisedButton(
-                    //       child: Text("Count Number"),
-                    //       onPressed: pressButton,
-                    //     )
-                    //   ],
-                    // ))
-                    ),
+                        height: 50)),
               ),
               Container(
                 // color: Colors.yellow,
@@ -148,9 +103,6 @@ class _LoginPageState extends State<LoginPage> {
                                 maxLength: 256,
                                 keyboardType: TextInputType.emailAddress,
                                 decoration: InputDecoration(
-                                    // icon: Icon(Icons.adb), //icon di luar border text field
-                                    // prefixIcon, prefixText, prefixStyle (TextStyle) //icon di dalam text field + text
-                                    // labelText //untuk label text field
                                     hintText: 'Email address*',
                                     hintStyle: TextStyle(
                                         fontSize: 13,
@@ -183,8 +135,7 @@ class _LoginPageState extends State<LoginPage> {
                                     border: OutlineInputBorder(
                                         borderRadius:
                                             BorderRadius.circular(8))),
-                                obscureText:
-                                    true, //untuk password biar ga keliatan
+                                obscureText: true,
                                 onChanged: (value) {
                                   setState(() {});
                                 },
